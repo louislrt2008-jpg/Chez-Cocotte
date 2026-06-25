@@ -289,9 +289,9 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <span class="eyebrow">Cuisine mijotée &mdash; Poitiers</span>
-      <h1>Ce qui mijote<br>longtemps<br><em>se mange</em> en silence.</h1>
-      <p class="lead">Chez Cocotte, on cuisine comme nos grand-mères : à feu doux, avec ce qu'il y a de meilleur sur les étals de Poitiers. Une cuisine de terroir revisitée, servie dans des cocottes en fonte, au coeur du centre-ville.</p>
+      <span class="eyebrow" id="hero-eyebrow">Cuisine mijotée &mdash; Poitiers</span>
+      <h1 id="hero-titre">Ce qui mijote<br>longtemps<br><em>se mange</em> en silence.</h1>
+      <p class="lead" id="hero-texte">Chez Cocotte, on cuisine comme nos grand-mères : à feu doux, avec ce qu'il y a de meilleur sur les étals de Poitiers. Une cuisine de terroir revisitée, servie dans des cocottes en fonte, au coeur du centre-ville.</p>
       <div class="hero-actions">
         <a href="#reserver" class="btn btn-primary">Réserver une table</a>
         <a href="#menu" class="btn btn-ghost">Voir la carte</a>
@@ -333,156 +333,71 @@
 <section class="histoire" id="histoire">
   <div class="histoire-grid">
     <div class="section-head">
-      <span class="eyebrow">Notre histoire</span>
-      <h2>Une cocotte, une famille, un quartier.</h2>
+      <span class="eyebrow" id="histoire-eyebrow">Notre histoire</span>
+      <h2 id="histoire-titre">Une cocotte, une famille, un quartier.</h2>
     </div>
     <div>
-      <p>Chez Cocotte est né d'une idée simple : redonner sa place au plat mijoté, celui qu'on laisse cuire pendant qu'on discute autour de la table. Pas de chichi, pas de pince à épiler sur l'assiette. Juste de la fonte chaude, du temps, et des produits qu'on connaît par leur nom.</p>
-      <p>Le restaurant s'est installé dans une ancienne épicerie du centre de Poitiers, à deux pas du Palais de Justice. On a gardé les poutres, les vieilles étagères, et on a ajouté nos cocottes, nos fours, et une carte qui change avec les saisons.</p>
-      <div class="stat-row">
-        <div><div class="num">8</div><div class="label">ans rue de la Cocotte</div></div>
-        <div><div class="num">100%</div><div class="label">produits locaux & de saison</div></div>
-        <div><div class="num">4h</div><div class="label">de mijotage en moyenne</div></div>
-      </div>
+      <p id="histoire-p1">Chez Cocotte est né d'une idée simple...</p>
+      <p id="histoire-p2">Le restaurant s'est installé...</p>
+      <div class="stat-row" id="histoire-stats"></div>
     </div>
   </div>
 </section>
 
 <section class="menu" id="menu">
   <div class="section-head">
-    <span class="eyebrow">La carte</span>
-    <h2>Ce qui mijote aujourd'hui</h2>
+    <span class="eyebrow" id="menu-eyebrow">La carte</span>
+    <h2 id="menu-titre">Ce qui mijote aujourd'hui</h2>
   </div>
-  <div class="ardoise">
-    <div class="menu-cat">
-      <h3>Pour commencer</h3>
-      <div class="menu-item">
-        <div><span class="name">Velouté de potimarron</span><span class="desc">noisettes torréfiées, huile de courge</span></div>
-        <span class="price mono">8 €</span>
-      </div>
-      <div class="menu-item">
-        <div><span class="name">Terrine de la maison</span><span class="desc">cornichons maison, pain de campagne grillé</span></div>
-        <span class="price mono">9 €</span>
-      </div>
-      <div class="menu-item">
-        <div><span class="name">Oeuf mollet & lardons</span><span class="desc">mouillettes, vinaigrette à l'échalote</span></div>
-        <span class="price mono">9 €</span>
-      </div>
-    </div>
-    <div class="menu-cat">
-      <h3>Les cocottes</h3>
-      <div class="menu-item">
-        <div><span class="name">Joue de boeuf mijotée</span><span class="desc">vin de Loire, carottes fondantes, purée maison</span></div>
-        <span class="price mono">19 €</span>
-      </div>
-      <div class="menu-item">
-        <div><span class="name">Poule au pot d'antan</span><span class="desc">bouillon clair, légumes du marché, riz</span></div>
-        <span class="price mono">18 €</span>
-      </div>
-      <div class="menu-item">
-        <div><span class="name">Cassoulet de canard</span><span class="desc">haricots tarbais, confit, saucisse fumée</span></div>
-        <span class="price mono">21 €</span>
-      </div>
-      <div class="menu-item">
-        <div><span class="name">Tatin de légumes d'hiver</span><span class="desc">version végétarienne, fromage de chèvre fondu</span></div>
-        <span class="price mono">16 €</span>
-      </div>
-    </div>
-    <div class="menu-cat">
-      <h3>Pour finir</h3>
-      <div class="menu-item">
-        <div><span class="name">Riz au lait grand-mère</span><span class="desc">caramel au beurre salé</span></div>
-        <span class="price mono">7 €</span>
-      </div>
-      <div class="menu-item">
-        <div><span class="name">Tarte fine aux pommes</span><span class="desc">crème fraîche battue à la main</span></div>
-        <span class="price mono">8 €</span>
-      </div>
-    </div>
-    <p class="menu-note">Menu du marché, midi en semaine — 16,50 € (entrée + plat ou plat + dessert)</p>
-  </div>
+  <div class="ardoise" id="menu-ardoise"></div>
 </section>
 
 <section class="ambiance" id="ambiance">
   <div class="section-head">
-    <span class="eyebrow">L'ambiance</span>
-    <h2>Une salle qui sent bon le feu doux</h2>
+    <span class="eyebrow" id="ambiance-eyebrow">L'ambiance</span>
+    <h2 id="ambiance-titre">Une salle qui sent bon le feu doux</h2>
   </div>
-  <div class="ambiance-grid">
-    <div class="amb-card">
-      <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="375" fill="#2A2622"/>
-        <rect x="0" y="260" width="300" height="115" fill="#1C1A18"/>
-        <circle cx="150" cy="150" r="90" fill="#B5572A" opacity="0.25"/>
-        <rect x="60" y="120" width="180" height="8" fill="#E8C468" opacity="0.5"/>
-        <rect x="60" y="150" width="180" height="8" fill="#E8C468" opacity="0.3"/>
-        <rect x="60" y="180" width="120" height="8" fill="#E8C468" opacity="0.4"/>
-      </svg>
-      <div class="cap">Les poutres d'origine, rue de la Cocotte</div>
-    </div>
-    <div class="amb-card">
-      <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="375" fill="#6B1F1F"/>
-        <circle cx="150" cy="180" r="70" fill="#1C1A18"/>
-        <circle cx="150" cy="180" r="55" fill="#B5572A"/>
-        <circle cx="150" cy="180" r="40" fill="#E8C468" opacity="0.6"/>
-      </svg>
-      <div class="cap">Nos cocottes en fonte, prêtes pour le service</div>
-    </div>
-    <div class="amb-card">
-      <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="375" fill="#1C1A18"/>
-        <rect x="40" y="60" width="220" height="255" fill="#2A2622"/>
-        <rect x="60" y="90" width="60" height="60" fill="#E8C468" opacity="0.3"/>
-        <rect x="140" y="90" width="60" height="60" fill="#B5572A" opacity="0.4"/>
-        <rect x="60" y="170" width="60" height="60" fill="#B5572A" opacity="0.3"/>
-        <rect x="140" y="170" width="60" height="60" fill="#E8C468" opacity="0.4"/>
-      </svg>
-      <div class="cap">Le bar à vins de la Vienne</div>
-    </div>
-  </div>
+  <div class="ambiance-grid" id="ambiance-grid"></div>
 </section>
 
 <section class="infos" id="infos">
   <div class="infos-grid">
     <div>
-      <span class="eyebrow" style="color:var(--beurre)">Infos pratiques</span>
-      <h2>Venez quand le ventre crie</h2>
+      <span class="eyebrow" id="infos-eyebrow" style="color:var(--beurre)">Infos pratiques</span>
+      <h2 id="infos-titre">Venez quand le ventre crie</h2>
       <div class="info-block">
         <span class="label">Adresse</span>
-        <p>14 rue de la Cocotte, 86000 Poitiers</p>
+        <p id="infos-adresse">14 rue de la Cocotte, 86000 Poitiers</p>
       </div>
       <div class="info-block">
         <span class="label">Téléphone</span>
-        <p><a href="tel:+33549000000">05 49 00 00 00</a></p>
+        <p><a href="tel:+33549000000" id="infos-tel">05 49 00 00 00</a></p>
       </div>
       <div class="info-block">
         <span class="label">Horaires</span>
-        <div class="hours-row"><span>Mardi — Vendredi</span><span>12h–14h / 19h–22h</span></div>
-        <div class="hours-row"><span>Samedi</span><span>19h–23h</span></div>
-        <div class="hours-row"><span>Dimanche & Lundi</span><span>Fermé</span></div>
+        <div id="infos-horaires"></div>
       </div>
     </div>
-    <form class="contact" id="reserver">
+    <form class="contact" id="reserver" action="https://formspree.io/f/VOTRE_ID_ICI" method="POST">
       <h3>Réserver une table</h3>
       <p class="sub">On vous confirme par téléphone dans la journée.</p>
       <div class="field">
         <label for="nom">Nom</label>
-        <input type="text" id="nom" placeholder="Votre nom">
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
       </div>
       <div class="row2">
         <div class="field">
           <label for="date">Date</label>
-          <input type="date" id="date">
+          <input type="date" id="date" name="date" required>
         </div>
         <div class="field">
           <label for="heure">Heure</label>
-          <input type="time" id="heure">
+          <input type="time" id="heure" name="heure" required>
         </div>
       </div>
       <div class="field">
         <label for="personnes">Nombre de personnes</label>
-        <select id="personnes">
+        <select id="personnes" name="personnes">
           <option>1 personne</option>
           <option selected>2 personnes</option>
           <option>3 personnes</option>
@@ -492,17 +407,101 @@
       </div>
       <div class="field">
         <label for="tel">Téléphone</label>
-        <input type="tel" id="tel" placeholder="06 00 00 00 00">
+        <input type="tel" id="tel" name="telephone" placeholder="06 00 00 00 00" required>
       </div>
-      <button type="button" class="btn-send" onclick="alert('Merci ! Votre demande a bien été envoyée. On vous rappelle vite.')">Envoyer la demande</button>
+      <input type="hidden" name="_subject" value="Nouvelle réservation — Chez Cocotte">
+      <button type="submit" class="btn-send">Envoyer la demande</button>
     </form>
   </div>
 </section>
 
 <footer>
   <div class="logo">Chez <span>Cocotte</span></div>
-  <div>14 rue de la Cocotte, 86000 Poitiers — © 2026 Chez Cocotte</div>
+  <div id="footer-texte">14 rue de la Cocotte, 86000 Poitiers — © 2026 Chez Cocotte</div>
 </footer>
 
+<script>
+fetch('content.json')
+  .then(r => r.json())
+  .then(d => {
+    // HERO
+    document.getElementById('hero-eyebrow').textContent = d.hero.eyebrow;
+    document.getElementById('hero-titre').innerHTML =
+      d.hero.titre_ligne1 + '<br>' + d.hero.titre_ligne2 + '<br><em>' + d.hero.titre_italique + '</em> ' + d.hero.titre_fin;
+    document.getElementById('hero-texte').textContent = d.hero.texte;
+
+    // HISTOIRE
+    document.getElementById('histoire-eyebrow').textContent = d.histoire.eyebrow;
+    document.getElementById('histoire-titre').textContent = d.histoire.titre;
+    document.getElementById('histoire-p1').textContent = d.histoire.paragraphe1;
+    document.getElementById('histoire-p2').textContent = d.histoire.paragraphe2;
+    document.getElementById('histoire-stats').innerHTML = d.histoire.stats.map(s =>
+      `<div><div class="num">${s.chiffre}</div><div class="label">${s.label}</div></div>`
+    ).join('');
+
+    // MENU
+    document.getElementById('menu-eyebrow').textContent = d.menu.eyebrow;
+    document.getElementById('menu-titre').textContent = d.menu.titre;
+    const catsHtml = d.menu.categories.map(cat => `
+      <div class="menu-cat">
+        <h3>${cat.nom}</h3>
+        ${cat.plats.map(p => `
+          <div class="menu-item">
+            <div><span class="name">${p.nom}</span><span class="desc">${p.description}</span></div>
+            <span class="price mono">${p.prix}</span>
+          </div>`).join('')}
+      </div>`).join('');
+    document.getElementById('menu-ardoise').innerHTML = catsHtml + `<p class="menu-note">${d.menu.note}</p>`;
+
+    // AMBIANCE
+    document.getElementById('ambiance-eyebrow').textContent = d.ambiance.eyebrow;
+    document.getElementById('ambiance-titre').textContent = d.ambiance.titre;
+    const palettes = [
+      ['#2A2622','#1C1A18','#B5572A'],
+      ['#6B1F1F','#1C1A18','#B5572A'],
+      ['#1C1A18','#2A2622','#E8C468']
+    ];
+    document.getElementById('ambiance-grid').innerHTML = d.ambiance.cartes.map((c, i) => {
+      const p = palettes[i % palettes.length];
+      return `
+      <div class="amb-card">
+        <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="375" fill="${p[0]}"/>
+          <circle cx="150" cy="180" r="80" fill="${p[1]}"/>
+          <circle cx="150" cy="180" r="55" fill="${p[2]}" opacity="0.45"/>
+        </svg>
+        <div class="cap">${c.legende}</div>
+      </div>`;
+    }).join('');
+
+    // INFOS
+    document.getElementById('infos-eyebrow').textContent = d.infos.eyebrow;
+    document.getElementById('infos-titre').textContent = d.infos.titre;
+    document.getElementById('infos-adresse').textContent = d.infos.adresse;
+    const telLien = document.getElementById('infos-tel');
+    telLien.textContent = d.infos.telephone;
+    telLien.href = 'tel:' + d.infos.telephone_lien;
+    document.getElementById('infos-horaires').innerHTML = d.infos.horaires.map(h =>
+      `<div class="hours-row"><span>${h.jours}</span><span>${h.creneau}</span></div>`
+    ).join('');
+
+    // FOOTER
+    document.getElementById('footer-texte').textContent = d.footer.texte;
+  })
+  .catch(err => console.error('Erreur de chargement du contenu :', err));
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
