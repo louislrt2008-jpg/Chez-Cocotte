@@ -9,19 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --fonte: #1C1A18;       /* fond cocotte fonte */
-    --creme: #F2E8D8;       /* crème/papier */
-    --cuivre: #B5572A;      /* cuivre/terre cuite */
-    --vin: #6B1F1F;         /* vin/braise */
-    --beurre: #E8C468;      /* beurre/jaune doux */
-    --creme-soft: #E9DCC4;
-    --fonte-soft: #2A2622;
+    --noir: #0E0D0C;        /* fond principal, devanture */
+    --noir-soft: #181614;   /* cartes sur fond noir */
+    --creme: #F2EEE6;       /* fond clair / texte sur noir */
+    --bois: #8B6239;        /* bois noyer des tables */
+    --ambre: #D9A857;       /* suspensions ambrées */
+    --neon: #4FE3DD;        /* néon turquoise "Cocotte" */
+    --vert-sombre: #1B2A22; /* mur végétal */
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     background:var(--creme);
-    color:var(--fonte);
+    color:var(--noir);
     font-family:'Inter',sans-serif;
     overflow-x:hidden;
   }
@@ -46,7 +46,7 @@
     font-weight:700;font-size:1.3rem;
     letter-spacing:0.01em;
   }
-  .logo span{color:var(--cuivre);}
+  .logo span{color:var(--neon);}
   nav ul{display:flex;gap:32px;list-style:none;}
   nav a{
     font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;
@@ -56,16 +56,16 @@
   }
   nav a::after{
     content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;
-    background:var(--cuivre);transition:width 0.3s ease;
+    background:var(--neon);transition:width 0.3s ease;
   }
   nav a:hover::after{width:100%;}
   .nav-cta{
-    background:var(--vin);color:var(--creme);
+    background:var(--vert-sombre);color:var(--creme);
     padding:10px 20px;border-radius:2px;
     font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;
   }
   .nav-cta::after{display:none;}
-  .nav-cta:hover{background:var(--fonte);}
+  .nav-cta:hover{background:var(--noir);}
   @media (max-width:760px){
     nav ul{display:none;}
     header{padding:18px 5vw;}
@@ -78,29 +78,32 @@
     position:relative;
     padding:140px 6vw 80px;
     background:
-      radial-gradient(circle at 80% 20%, rgba(181,87,42,0.10), transparent 50%),
-      var(--creme);
+      linear-gradient(to right, rgba(14,13,12,0.94) 35%, rgba(14,13,12,0.55) 75%, rgba(14,13,12,0.3)),
+      url('images/salle-neon.jpg');
+    background-size:cover;
+    background-position:center;
+    color:var(--creme);
   }
   .hero-inner{
-    display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;
-    max-width:1180px;width:100%;align-items:center;
+    display:block;
+    max-width:1180px;width:100%;
   }
   .eyebrow{
     font-family:'Space Mono',monospace;
     font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;
-    color:var(--cuivre);margin-bottom:18px;display:block;
+    color:var(--neon);margin-bottom:18px;display:block;
   }
   .hero h1{
     font-size:clamp(2.6rem,5.4vw,4.4rem);
     line-height:1.04;font-weight:700;
-    margin-bottom:24px;
+    margin-bottom:24px;color:var(--creme);
   }
   .hero h1 em{
-    font-style:italic;color:var(--vin);font-weight:500;
+    font-style:italic;color:var(--neon);font-weight:500;
   }
   .hero p.lead{
     font-size:1.08rem;line-height:1.6;max-width:480px;
-    color:#3a352f;margin-bottom:34px;
+    color:#d8d2c6;margin-bottom:34px;
   }
   .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
   .btn{
@@ -109,42 +112,14 @@
     font-weight:600;font-size:0.92rem;
     transition:transform 0.25s ease, background 0.25s ease;
   }
-  .btn-primary{background:var(--fonte);color:var(--creme);}
-  .btn-primary:hover{background:var(--vin);transform:translateY(-2px);}
-  .btn-ghost{border:1.5px solid var(--fonte);color:var(--fonte);}
-  .btn-ghost:hover{background:var(--fonte);color:var(--creme);transform:translateY(-2px);}
+  .btn-primary{background:var(--neon);color:var(--noir);}
+  .btn-primary:hover{background:var(--ambre);transform:translateY(-2px);}
+  .btn-ghost{border:1.5px solid var(--creme);color:var(--creme);}
+  .btn-ghost:hover{background:var(--creme);color:var(--noir);transform:translateY(-2px);}
 
-  /* signature: la cocotte qui mijote */
-  .pot-wrap{
-    position:relative;display:flex;justify-content:center;
-  }
-  .pot-wrap svg{width:100%;max-width:420px;}
-  .steam{
-    opacity:0.55;
-    transform-origin:center bottom;
-    animation:rise 4s ease-in-out infinite;
-  }
-  .steam.s2{animation-delay:0.7s;}
-  .steam.s3{animation-delay:1.4s;}
-  @keyframes rise{
-    0%{transform:translateY(0) scale(1);opacity:0;}
-    15%{opacity:0.5;}
-    50%{transform:translateY(-38px) scale(1.15);opacity:0.35;}
-    100%{transform:translateY(-78px) scale(1.3);opacity:0;}
-  }
-  .lid{
-    animation:simmer 3.2s ease-in-out infinite;
-    transform-origin:50% 100%;
-  }
-  @keyframes simmer{
-    0%,100%{transform:translateY(0) rotate(0deg);}
-    50%{transform:translateY(-2px) rotate(-0.6deg);}
-  }
   @media (max-width:880px){
-    .hero-inner{grid-template-columns:1fr;text-align:center;}
-    .hero p.lead{margin-inline:auto;}
-    .hero-actions{justify-content:center;}
-    .pot-wrap{order:-1;}
+    .hero{background-position:center 30%;}
+    .hero-actions{justify-content:flex-start;}
   }
 
   /* ---------- SECTION GENERIC ---------- */
@@ -154,7 +129,7 @@
   .section-head h2{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:600;}
 
   /* ---------- L'HISTOIRE ---------- */
-  .histoire{background:var(--fonte);color:var(--creme);}
+  .histoire{background:var(--noir);color:var(--creme);}
   .histoire .section-head h2{color:var(--creme);}
   .histoire-grid{
     display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start;
@@ -163,7 +138,7 @@
   .histoire-grid p{line-height:1.75;font-size:1.02rem;color:#d8cfc0;margin-bottom:18px;}
   .stat-row{display:flex;gap:48px;margin-top:36px;}
   .stat-row div{flex:1;}
-  .stat-row .num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--beurre);}
+  .stat-row .num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--ambre);}
   .stat-row .label{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.07em;color:#a89a85;margin-top:6px;}
   @media (max-width:880px){.histoire-grid{grid-template-columns:1fr;}}
 
@@ -172,7 +147,7 @@
   .menu .section-head{margin-left:auto;margin-right:auto;text-align:center;}
   .ardoise{
     max-width:880px;margin:0 auto;
-    background:var(--fonte-soft);
+    background:var(--noir-soft);
     border-radius:4px;
     padding:54px 6vw;
     box-shadow:0 24px 50px -20px rgba(28,26,24,0.35);
@@ -185,7 +160,7 @@
   .menu-cat{margin-bottom:42px;}
   .menu-cat:last-child{margin-bottom:0;}
   .menu-cat h3{
-    color:var(--beurre);font-size:0.95rem;text-transform:uppercase;
+    color:var(--ambre);font-size:0.95rem;text-transform:uppercase;
     letter-spacing:0.12em;font-weight:600;margin-bottom:20px;
     font-family:'Space Mono',monospace;
   }
@@ -197,7 +172,7 @@
   .menu-item:last-child{border-bottom:none;}
   .menu-item .name{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:500;}
   .menu-item .desc{display:block;font-size:0.85rem;color:#b5a890;margin-top:3px;font-weight:400;font-family:'Inter',sans-serif;}
-  .menu-item .price{font-family:'Space Mono',monospace;color:var(--beurre);white-space:nowrap;font-size:1rem;}
+  .menu-item .price{font-family:'Space Mono',monospace;color:var(--ambre);white-space:nowrap;font-size:1rem;}
   .menu-note{
     text-align:center;margin-top:38px;font-size:0.85rem;color:#7a6f5e;
   }
@@ -209,9 +184,9 @@
   }
   .amb-card{
     aspect-ratio:4/5;border-radius:3px;overflow:hidden;
-    position:relative;background:var(--fonte-soft);
+    position:relative;background:var(--noir-soft);
   }
-  .amb-card svg{width:100%;height:100%;display:block;}
+  .amb-card img{width:100%;height:100%;object-fit:cover;display:block;}
   .amb-card .cap{
     position:absolute;bottom:0;left:0;right:0;padding:18px;
     background:linear-gradient(to top, rgba(28,26,24,0.78), transparent);
@@ -220,7 +195,7 @@
   @media (max-width:760px){.ambiance-grid{grid-template-columns:1fr;}}
 
   /* ---------- INFOS / RESERVATION ---------- */
-  .infos{background:var(--vin);color:var(--creme);}
+  .infos{background:var(--vert-sombre);color:var(--creme);}
   .infos-grid{
     display:grid;grid-template-columns:1fr 1fr;gap:64px;
     max-width:1180px;margin:0 auto;align-items:start;
@@ -229,7 +204,7 @@
   .info-block{margin-bottom:28px;}
   .info-block .label{
     font-family:'Space Mono',monospace;font-size:0.78rem;text-transform:uppercase;
-    letter-spacing:0.1em;color:var(--beurre);margin-bottom:8px;display:block;
+    letter-spacing:0.1em;color:var(--ambre);margin-bottom:8px;display:block;
   }
   .info-block p, .info-block a{font-size:1.02rem;line-height:1.6;color:#f0e4d4;}
   .hours-row{display:flex;justify-content:space-between;max-width:320px;padding:6px 0;font-size:0.95rem;border-bottom:1px solid rgba(242,232,216,0.14);}
@@ -243,17 +218,17 @@
   form.contact h3{color:var(--creme);font-size:1.4rem;margin-bottom:6px;font-weight:600;}
   form.contact .sub{color:#e0d3c1;font-size:0.9rem;margin-bottom:26px;}
   .field{margin-bottom:18px;}
-  .field label{display:block;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--beurre);margin-bottom:7px;}
+  .field label{display:block;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--ambre);margin-bottom:7px;}
   .field input, .field select{
     width:100%;padding:12px 14px;background:rgba(242,232,216,0.95);
-    border:none;border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--fonte);
+    border:none;border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--noir);
   }
   .field input:focus, .field select:focus, .btn:focus, nav a:focus, .nav-cta:focus{
-    outline:2px solid var(--beurre);outline-offset:2px;
+    outline:2px solid var(--ambre);outline-offset:2px;
   }
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .btn-send{
-    width:100%;background:var(--beurre);color:var(--fonte);border:none;
+    width:100%;background:var(--ambre);color:var(--noir);border:none;
     padding:15px;border-radius:2px;font-weight:700;font-size:0.95rem;
     cursor:pointer;transition:background 0.25s ease;
     text-transform:uppercase;letter-spacing:0.06em;
@@ -263,18 +238,18 @@
 
   /* ---------- FOOTER ---------- */
   footer{
-    background:var(--fonte);color:#a89a85;
+    background:var(--noir);color:#a89a85;
     padding:44px 6vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
     font-size:0.85rem;
   }
   footer .logo{color:var(--creme);font-size:1.05rem;}
-  footer .logo span{color:var(--cuivre);}
+  footer .logo span{color:var(--neon);}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Chez <span>Cocotte</span></div>
+  <div class="logo"><img src="images/logo.jpg" alt="Chez Cocotte" style="height:42px;display:block;border-radius:4px;"></div>
   <nav>
     <ul>
       <li><a href="#histoire">Notre histoire</a></li>
@@ -297,36 +272,6 @@
         <a href="#menu" class="btn btn-ghost">Voir la carte</a>
       </div>
     </div>
-    <div class="pot-wrap">
-      <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="200" cy="365" rx="150" ry="18" fill="#1C1A18" opacity="0.12"/>
-        <!-- steam -->
-        <g>
-          <path class="steam s1" d="M180 150 C170 130, 195 115, 185 95 C178 80, 195 65, 188 50" stroke="#F2E8D8" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path class="steam s2" d="M210 150 C200 130, 222 118, 212 98 C206 84, 220 68, 214 52" stroke="#F2E8D8" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <path class="steam s3" d="M150 155 C142 138, 160 122, 152 105" stroke="#F2E8D8" stroke-width="5" stroke-linecap="round" fill="none"/>
-        </g>
-        <!-- lid -->
-        <g class="lid">
-          <ellipse cx="200" cy="158" rx="118" ry="20" fill="#B5572A"/>
-          <rect x="186" y="128" width="28" height="20" rx="6" fill="#6B1F1F"/>
-          <ellipse cx="200" cy="128" rx="14" ry="8" fill="#6B1F1F"/>
-        </g>
-        <!-- pot body -->
-        <path d="M70 168 L80 300 C82 340, 130 365, 200 365 C270 365, 318 340, 320 300 L330 168 Z" fill="#1C1A18"/>
-        <path d="M70 168 L80 300 C82 340, 130 365, 200 365 C270 365, 318 340, 320 300 L330 168 Z" fill="url(#gradeSheen)" opacity="0.5"/>
-        <ellipse cx="200" cy="170" rx="130" ry="16" fill="#2A2622"/>
-        <!-- handles -->
-        <path d="M70 195 C40 195, 38 235, 65 240" stroke="#1C1A18" stroke-width="14" fill="none" stroke-linecap="round"/>
-        <path d="M330 195 C360 195, 362 235, 335 240" stroke="#1C1A18" stroke-width="14" fill="none" stroke-linecap="round"/>
-        <defs>
-          <linearGradient id="gradeSheen" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#3a352f"/>
-            <stop offset="100%" stop-color="#1C1A18"/>
-          </linearGradient>
-        </defs>
-      </svg>
-    </div>
   </div>
 </section>
 
@@ -335,6 +280,7 @@
     <div class="section-head">
       <span class="eyebrow" id="histoire-eyebrow">Notre histoire</span>
       <h2 id="histoire-titre">Une cocotte, une famille, un quartier.</h2>
+      <img src="images/plat.jpg" alt="Un plat signature Chez Cocotte" style="width:100%;border-radius:4px;margin-top:30px;display:block;">
     </div>
     <div>
       <p id="histoire-p1">Chez Cocotte est né d'une idée simple...</p>
@@ -363,7 +309,7 @@
 <section class="infos" id="infos">
   <div class="infos-grid">
     <div>
-      <span class="eyebrow" id="infos-eyebrow" style="color:var(--beurre)">Infos pratiques</span>
+      <span class="eyebrow" id="infos-eyebrow" style="color:var(--ambre)">Infos pratiques</span>
       <h2 id="infos-titre">Venez quand le ventre crie</h2>
       <div class="info-block">
         <span class="label">Adresse</span>
@@ -381,16 +327,16 @@
     <div class="contact" id="reserver">
       <h3>Réserver une table</h3>
       <p class="sub">La réservation se fait directement via notre plateforme partenaire. Vous serez redirigé en un clic.</p>
-      <a href="https://www.google.com/maps/reserve/v/dine/c/Q1C_-QyvVAI?source=pa&opi=89978449&hl=fr-FR&gei=gc9BarvUE5GJkdUPn_re8Ag&sourceurl=https://www.google.com/async/lcl_pv?vet%3D10CAAQoqAOahcKEwi4s9eDq6uVAxUAAAAAHQAAAAAQBQ..i%26ei%3Df89Baq2WDNbw7M8PpPqg4As%26opi%3D89978449%26client%3Dsafari%26pvq%3DCg0vZy8xMXdwczlmN3N4IhIKDGNoZXogY29jb3R0ZRACGAM%26lqi%3DCgxjaGV6IGNvY290dGVInL7ahNe7gIAIWhYQABABGAAYASIMY2hleiBjb2NvdHRlkgEKcmVzdGF1cmFudA%26tbs%3Dlrf:!3sIAE%253D%26q%3Dchez%2Bcocotte%26fvr%3D1%26cs%3D1%26async%3D_basejs:/xjs/_/js/k%253Dxjs.s.fr.pLCmEAJ-2c8.2019.O/am%253DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACIAAAAEQAAAEAgAAAAAAAAAAAAAAAAAAABkAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgAAAAoAEAAAAAAAAAEAAAAAAACAAAAAQAAAAAgAEAAgBAACEAAACAAgAAAAAAAAAAAAAAAAAAAAAAQBIAAAAIERQBAAD8zXwDAFAAAAAAwAEAAAAAAAAAAAAAAAAAAAAAAAAAAAkAwAAAAAAAAADAAgAAAMEAAAABEBAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAgAAAAAAAoAAAAAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAACgAAAAAAOAAAAAAAAAAAAgAAAAAAAAAAAAAAABAAAAAAoAEAAAAAAAAAAAAAgIAfAARAAAAAAACAAAAAAAABAQEAAAAAAAAEEAgAIAAAAACQA-DxABwiOAAAAAAAAAAAAAAAAAAAAAAAAAAAArAAxoHkBwRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBFcAIAAAAAAGBLAEA/dg%253D0/br%253D1/ichc%253D1/rs%253DACT90oFBghcfzCMqWWrtcC7UUlRluAOiNQ/cb%253Dloaded_h_0?cb%253D121509378,_basecss:/xjs/_/ss/k%253Dxjs.s.4AzVjY59iIA.L.W1.O/am%253DAAAQAAAAAAIAAAAAAAAAAAAABAAgAgAAAAAAAAAAAAAAAAAAAAgAAgAAEAAAAAAAAAAAAAAIAAAAAIAAAAAAggIAABkAAAAAAAAAAAUAAAAAAEhABAAmAAAAAAAAAEAhHwAA4AYAAAEAAHgAGACEAAAAAAAAAAAAAAAAQAAAoAEAAAAA_gAAEAAAAgAAAAAAAEQAAAAAAAAABgBAAAUAAAAgQAEAAAQAAAAIAAAAAAAAAAAABBIIAAAIAAABAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA4A0wAAAAAAAAMIAACAAAAAAAAIBABAAAAAAAAAAAABBAiQAAAIGAAAAAIAAAAAAAAAAAAgIIAiFAAAIAApAQAAAAALAAUAAAAAAAAAAAEAAAAAAAAAAAAACABAEIAQQAAAAAIACAAAAAEAAAAAAOQAAAAAAAAAEEAAAUACGAWAAABIFARACABACAAEAAEDEAAAAAAAABAQAAAAAAAAAAACACAAAAAAAAAAAAAAIAII9EAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE/br%253D1/cb%253Dloaded_h_0/rs%253DACT90oFCHy33s17qUZV8ng6zwHUjydgEZA?cb%253D121509378,_basecomb:/xjs/_/js/k%253Dxjs.s.fr.pLCmEAJ-2c8.2019.O/ck%253Dxjs.s.4AzVjY59iIA.L.W1.O/am%253DAAAQAAAAAAIAAAAAAAAAAAAABAAgAgAAAAAAAAAAAAAAAAAAAAgAAgAAEAAAAAAAAAAAAAAIAAAAAIAAAAAAggIAABkAACACIAAAAEUAAAEAgEhABAAmAAAAAAAAAEAhH0AA4AYAAAEAAHgAGACEAAAAAAAAAAAAAAQgQAAAoAEAAAAA_gAAEAAAAgAACAAAAEQAAAAAgAEABgBAACUAAACgQgEAAAQAAAAIAAAAAAAAAAAARBIIAAAIERQBAAD8zXwDANAAAAAAwAEAAAAAAAAAAAAAAAAAAAgAAAAAA4k0wAAAAAAAAMLAAiAAAMEAAAIBEBAAAQAAAAAAAABBAiQAAAIGAAgAAIAAAAAAAAAAAAgIIAiFAAAIAApAQAAAgALAAUAAAAAAAAAAAEAAAAAAACAAAAACABAEIAQQAAAAAIACAAAACkAAAAAAOQAAAAAAAAAEEgAAUACGAWAAABIFARACABACoAEAAEDEAAAAAAAAhIQfAARAAAAAAACACAAAAAABAQEAAAAIAII9EAgAIAAAAACQA-DxABwiOAAAAAAAAAAAAAAAAAAAAAAAAAAAArAAxoHkBwRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBFcAIAAAAAAGBLAEA/d%253D1/ed%253D1/dg%253D0/br%253D1/ujg%253D1/ichc%253D1/rs%253DACT90oG_3mqTeFi0hRfjXy8IQeDosBi-nQ/cb%253Dloaded_h_0?cb%253D121509378,_fmt:prog,_id:local-place-viewer" target="_blank" rel="noopener" class="btn-send" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
+      <a href="https://app.overfull.fr/booking-v2?key_id=34Lr5GE3x5Q&source=Instagram" target="_blank" rel="noopener" class="btn-send" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
         Réserver maintenant
       </a>
-      <p class="sub" style="margin-top:18px;font-size:0.8rem;">Vous pouvez aussi nous appeler directement au <a href="tel:+33516690429" style="color:var(--beurre);">05 16 69 04 29</a>.</p>
+      <p class="sub" style="margin-top:18px;font-size:0.8rem;">Vous pouvez aussi nous appeler directement au <a href="tel:+33516690429" style="color:var(--ambre);">05 16 69 04 29</a>.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="logo">Chez <span>Cocotte</span></div>
+  <div class="logo"><img src="images/logo.jpg" alt="Chez Cocotte" style="height:32px;display:block;border-radius:3px;"></div>
   <div id="footer-texte">14 rue de la Cocotte, 86000 Poitiers — © 2026 Chez Cocotte</div>
 </footer>
 
@@ -430,20 +376,12 @@ fetch('content.json')
     // AMBIANCE
     document.getElementById('ambiance-eyebrow').textContent = d.ambiance.eyebrow;
     document.getElementById('ambiance-titre').textContent = d.ambiance.titre;
-    const palettes = [
-      ['#2A2622','#1C1A18','#B5572A'],
-      ['#6B1F1F','#1C1A18','#B5572A'],
-      ['#1C1A18','#2A2622','#E8C468']
-    ];
+    const photos = ['images/facade.jpg', 'images/equipe.jpg', 'images/chef.jpg'];
     document.getElementById('ambiance-grid').innerHTML = d.ambiance.cartes.map((c, i) => {
-      const p = palettes[i % palettes.length];
+      const src = photos[i % photos.length];
       return `
       <div class="amb-card">
-        <svg viewBox="0 0 300 375" xmlns="http://www.w3.org/2000/svg">
-          <rect width="300" height="375" fill="${p[0]}"/>
-          <circle cx="150" cy="180" r="80" fill="${p[1]}"/>
-          <circle cx="150" cy="180" r="55" fill="${p[2]}" opacity="0.45"/>
-        </svg>
+        <img src="${src}" alt="${c.legende}" loading="lazy">
         <div class="cap">${c.legende}</div>
       </div>`;
     }).join('');
@@ -478,4 +416,4 @@ fetch('content.json')
   }
 </script>
 </body>
-</html>    
+</html>
