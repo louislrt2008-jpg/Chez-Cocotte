@@ -5,7 +5,7 @@
     "titre_ligne2": "longtemps",
     "titre_italique": "se mange",
     "titre_fin": "en silence.",
-    "texte": "Chez Cocotte, on cuisine comme nos grand-mères : à feu doux, avec ce qu'il y a de meilleur sur les étals de Poitiers. Une cuisine de terroir revisitée, servie dans des cocottes en fonte, au coeur du centre-ville."
+    "texte": "Chez Cocotte, une table où la saison inspire et le plaisir se partage. Une cuisine bistronomique au coeur de Poitiers, qui change avec les produits du marché."
   },
   "histoire": {
     "eyebrow": "Notre histoire",
@@ -13,18 +13,9 @@
     "paragraphe1": "Chez Cocotte est né d'une idée simple : redonner sa place au plat mijoté, celui qu'on laisse cuire pendant qu'on discute autour de la table. Pas de chichi, pas de pince à épiler sur l'assiette. Juste de la fonte chaude, du temps, et des produits qu'on connaît par leur nom.",
     "paragraphe2": "Le restaurant s'est installé dans une ancienne épicerie du centre de Poitiers, à deux pas du Palais de Justice. On a gardé les poutres, les vieilles étagères, et on a ajouté nos cocottes, nos fours, et une carte qui change avec les saisons.",
     "stats": [
-      {
-        "chiffre": "8",
-        "label": "ans rue de la Cocotte"
-      },
-      {
-        "chiffre": "100%",
-        "label": "produits locaux & de saison"
-      },
-      {
-        "chiffre": "4h",
-        "label": "de mijotage en moyenne"
-      }
+      { "chiffre": "8", "label": "ans rue de la Cocotte" },
+      { "chiffre": "100%", "label": "produits locaux & de saison" },
+      { "chiffre": "4h", "label": "de mijotage en moyenne" }
     ]
   },
   "menu": {
@@ -34,61 +25,25 @@
       {
         "nom": "Pour commencer",
         "plats": [
-          {
-            "nom": "Velouté de potimarron",
-            "description": "noisettes torréfiées, huile de courge",
-            "prix": "8 €"
-          },
-          {
-            "nom": "Terrine de la maison",
-            "description": "cornichons maison, pain de campagne grillé",
-            "prix": "9 €"
-          },
-          {
-            "nom": "Oeuf mollet & lardons",
-            "description": "mouillettes, vinaigrette à l'échalote",
-            "prix": "9 €"
-          }
+          { "nom": "Velouté de potimarron", "description": "noisettes torréfiées, huile de courge", "prix": "8 €" },
+          { "nom": "Terrine de la maison", "description": "cornichons maison, pain de campagne grillé", "prix": "9 €" },
+          { "nom": "Oeuf mollet & lardons", "description": "mouillettes, vinaigrette à l'échalote", "prix": "9 €" }
         ]
       },
       {
         "nom": "Les cocottes",
         "plats": [
-          {
-            "nom": "Joue de boeuf mijotée",
-            "description": "vin de Loire, carottes fondantes, purée maison",
-            "prix": "19 €"
-          },
-          {
-            "nom": "Poule au pot d'antan",
-            "description": "bouillon clair, légumes du marché, riz",
-            "prix": "18 €"
-          },
-          {
-            "nom": "Cassoulet de canard",
-            "description": "haricots tarbais, confit, saucisse fumée",
-            "prix": "21 €"
-          },
-          {
-            "nom": "Tatin de légumes d'hiver",
-            "description": "version végétarienne, fromage de chèvre fondu",
-            "prix": "16 €"
-          }
+          { "nom": "Joue de boeuf mijotée", "description": "vin de Loire, carottes fondantes, purée maison", "prix": "19 €" },
+          { "nom": "Poule au pot d'antan", "description": "bouillon clair, légumes du marché, riz", "prix": "18 €" },
+          { "nom": "Cassoulet de canard", "description": "haricots tarbais, confit, saucisse fumée", "prix": "21 €" },
+          { "nom": "Tatin de légumes d'hiver", "description": "version végétarienne, fromage de chèvre fondu", "prix": "16 €" }
         ]
       },
       {
         "nom": "Pour finir",
         "plats": [
-          {
-            "nom": "Riz au lait grand-mère",
-            "description": "caramel au beurre salé",
-            "prix": "7 €"
-          },
-          {
-            "nom": "Tarte fine aux pommes",
-            "description": "crème fraîche battue à la main",
-            "prix": "8 €"
-          }
+          { "nom": "Riz au lait grand-mère", "description": "caramel au beurre salé", "prix": "7 €" },
+          { "nom": "Tarte fine aux pommes", "description": "crème fraîche battue à la main", "prix": "8 €" }
         ]
       }
     ],
@@ -98,39 +53,23 @@
     "eyebrow": "L'ambiance",
     "titre": "Une salle qui sent bon le feu doux",
     "cartes": [
-      {
-        "legende": "Les poutres d'origine, rue de la Cocotte"
-      },
-      {
-        "legende": "Nos cocottes en fonte, prêtes pour le service"
-      },
-      {
-        "legende": "Le bar à vins de la Vienne"
-      }
+      { "legende": "Les poutres d'origine, rue de la Cocotte" },
+      { "legende": "Nos cocottes en fonte, prêtes pour le service" },
+      { "legende": "Le bar à vins de la Vienne" }
     ]
   },
   "infos": {
     "eyebrow": "Infos pratiques",
     "titre": "Venez quand le ventre crie",
-    "adresse": "4 Rue Saint-Nicolas, 86000 Poitiers",
+    "adresse": "4 rue Saint Nicolas, 86000 Poitiers",
     "telephone": "05 16 69 04 29",
-    "telephone_lien": "+335 16 69 04 29",
+    "telephone_lien": "+33516690429",
     "horaires": [
-      {
-        "jours": "Mardi — Vendredi",
-        "creneau": "12h–14h / 19h–22h"
-      },
-      {
-        "jours": "Samedi",
-        "creneau": "19h–23h"
-      },
-      {
-        "jours": "Dimanche & Lundi",
-        "creneau": "Fermé"
-      }
+      { "jours": "Mardi — Samedi", "creneau": "Midi & soir" },
+      { "jours": "Dimanche & Lundi", "creneau": "Fermé" }
     ]
   },
   "footer": {
-    "texte": "4 Rue Saint-Nicolas, 86000 Poitiers — © 2026 Chez Cocotte"
+    "texte": "4 rue Saint Nicolas, 86000 Poitiers — © 2026 Chez Cocotte"
   }
 }
