@@ -53,9 +53,9 @@
     "eyebrow": "L'ambiance",
     "titre": "Une salle qui sent bon le feu doux",
     "cartes": [
-      { "legende": "Les poutres d'origine, rue de la Cocotte" },
-      { "legende": "Nos cocottes en fonte, prêtes pour le service" },
-      { "legende": "Le bar à vins de la Vienne" }
+      { "legende": "Notre devanture, 4 rue Saint Nicolas" },
+      { "legende": "L'équipe Chez Cocotte" },
+      { "legende": "Le chef, fidèle aux produits de saison" }
     ]
   },
   "infos": {
